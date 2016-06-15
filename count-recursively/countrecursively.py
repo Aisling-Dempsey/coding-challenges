@@ -13,7 +13,10 @@ For example:
 
 def count_recursively(lst):
     """Return number of items in a list, using recursion."""
-
+#     base case
+    while lst:
+        return count_recursively(lst[1:]) + 1
+    return 0
 
 if __name__ == '__main__':
     import doctest
