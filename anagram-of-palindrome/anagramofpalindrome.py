@@ -29,6 +29,22 @@ Examples::
 
 def is_anagram_of_palindrome(word):
     """Is the word an anagram of a palindrome?"""
+    # minimum number of pairs of letters for word to be a palindrome
+    match_req = len(word)/2
+    # build dic of chars in string with count as values
+    letter_counts = {letter: word.count(letter) for letter in word}
+
+    found_match = 0
+    # loops through dict of letters and increments found_match for every pair
+    for key in letter_counts:
+            found_match += letter_counts[key]/2
+
+    # compares found matches to required matches
+    if found_match == match_req:
+        return True
+    else:
+            return False
+
 
 
 if __name__ == '__main__':
