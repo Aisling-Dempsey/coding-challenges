@@ -22,12 +22,27 @@ of 1-100, this should never be more than 7.
     7
 """
 
+
 def binary_search(val):
     """Using binary search, find val in range 1-100. Return # of guesses."""
 
     assert 0 < val < 101, "Val must be between 1-100"
 
     num_guesses = 0
+
+    u_bounds = 101
+    l_bounds = 0
+
+    guess = None
+
+    # evaluates whether the guess is equal to the value, and if not, makes a new guess and adjusts the bounds
+    while guess != val:
+        guess = ((u_bounds - l_bounds) / 2) + l_bounds
+        if guess > val:
+            u_bounds = guess
+        elif guess < val:
+            l_bounds = guess
+        num_guesses += 1
 
     return num_guesses
 
