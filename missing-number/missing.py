@@ -7,6 +7,10 @@ def missing_number(nums, max_num):
     *nums*: list of numbers 1..[max_num]; exactly one digit will be missing.
     *max_num*: Largest potential number in list
     """
+    # makes a list of what should be in the num list
+    correct_list = range(1, max_num+1)
+    # subtracts the totals of the two list and returns the difference, which is what is missing
+    return sum(correct_list) - sum(nums)
 
 
 if __name__ == '__main__':
