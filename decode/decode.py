@@ -24,19 +24,6 @@ Longer patterns should work::
 """
 
 
-# def decode(s):
-
-#     cypher = int(s[0])
-#     gc_index = cypher + 1
-#     good_word = s[gc_index]
-#     while gc_index + 1 < len(s):
-#         gc = s[gc_index]
-#         good_word += gc
-#         cypher_index = gc_index + 1
-#         cypher = int(s[cypher_index])
-#         gc_index = cypher_index + cypher + 1
-
-
 def decode(s):
     """Decode a string."""
     i = 0
