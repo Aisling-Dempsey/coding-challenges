@@ -21,13 +21,12 @@ For example::
 
 def print_digits(num):
     """Given int, print digits in reverse order, starting with the ones place."""
-    # print 'in function'
-        # print "in the while loop"
+
     remainder = num % 10
     print remainder
-    new_num = (num - remainder) / 10
+    new_num = num / 10
     # print num
-    if new_num > 0:
+    if new_num != 0:
         print_digits(new_num)
 
 
